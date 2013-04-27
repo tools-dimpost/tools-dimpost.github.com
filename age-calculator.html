@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Age Calculator | Tools - DIMPost</title>
+
+<meta name="description" content="Html color code picker tool, hexadecimal color code generator, one click color code picker for html - web design.">
+
+<link href="favicon.ico" rel="icon">
+<link href="stylesheets/styles.css" rel="stylesheet" type="text/css" />
+<link href="stylesheets/bootstrap-responsive.css" rel="stylesheet">
+<!--[if lte IE 7]>
+<style>
+.content { margin-right: -1px; } /* this 1px negative margin can be placed on any of the columns in this layout with the same corrective effect. */
+ul.nav a { zoom: 1; }  /* the zoom property gives IE the hasLayout trigger it needs to correct extra whiltespace between the links */
+</style>
+<![endif]-->
+<script type='text/javascript' src='age-calculator_file/jquery.js'></script>
+<link href="age-calculator_file/age-cal-style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body onLoad="wr_document()">
+<div id="dimpost-menu-container">    
+<div class="container"> 
+ <ul id="dimpost-menu">
+<li><a href="/" >Tools Home</a></li>
+<li><a href="http://dimpost.com" target="_blank">Blog</a></li>
+<li><a href="http://project.dimpost.com" target="_blank">Project</a></li>
+<li><a href="about.html">About Us</a></li>
+
+</ul>
+</div> 
+</div>
+
+<div id="main-wrapper">
+<div class="container">
+<div id="main-body">
+      <div class="row">
+        <div class="span2">
+  <div id="site-logo-des"> 
+        <div id="header-container">
+  		<div id="site-logo">
+  		<a href="/">Tools<span style="font-size: 70%;"> DIMPost</span></a> 
+        </div>
+		
+        <div id="site-description">
+  		<p>Free useful online tools by dimpost.com</p>
+  </div>
+    </div>
+  </div>
+ </div>
+ 
+
+<div class="span8"> 
+  <div id="content-container"> 
+  <div class="content">
+     <h1>Age Calculator <span>[<a href="raw/age-calculator.html" target="_blank">Raw</a>]</span></h1>
+     <p>Calculate your age in minute-hours-days with just one click! It is a very useful tool I think. And also it will show you how many days are left from your next birthday. Just try it!</p>  
+
+<div id="age-calculator" >
+<div style="max-width: 80%" >
+<table width="100%" cellspacing="4" cellpadding="0" border="0" bgcolor="">
+<tbody>
+<tr>
+<td colspan="2">
+<table class="result" width="100%" height="100%">
+<tbody>
+<tr>
+<td>
+<form name="cir">
+<table cellspacing="0" cellpadding="3">
+<tbody>
+<tr>
+<td colspan="2">
+<br>
+Today's  Date is:
+</td>
+</tr>
+<tr>
+<td align="center" colspan="2">
+Date -
+<input class="innerc resform" type="text" value="" onkeyup="checkday(this)" size="2" name="len11">
+Month -
+<input class="innerc resform" type="text" value="" onkeyup="checkmon(this)" size="2" name="len12">
+Year -
+<input class="innerc resform" type="text" value="" onkeyup="checkyear(this)" size="4" name="len13">
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td colspan="2"> Enter Your Date of Birth : </td>
+</tr>
+<tr>
+<td align="center" colspan="2">
+Date -
+<input class="innerc resform" type="text" onkeyup="checkday(this)" size="2" name="len21">
+Month -
+<input class="innerc resform" type="text" onkeyup="checkmon(this)" size="2" name="len22">
+Year -
+<input class="innerc resform" type="text" onkeyup="checkyear(this)" size="4" name="len23">
+<br>
+<br>
+<input class="calc" type="button" onclick="calage()" value=" Go " name="but">
+<br>
+<br>
+</td>
+</tr>
+<tr>
+<td class="form" width="30%" align="center">
+<b> </b>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>
+<b> Your Age is </b>
+</td>
+<td>
+<input class="resform" type="text" readonly="" size="36" name="val">
+</td>
+</tr>
+<tr>
+<td>
+<b> Your Age in Days </b>
+</td>
+<td>
+<input class="resform" type="text" readonly="" size="36" name="val1">
+</td>
+</tr>
+<tr>
+<td>
+<b> Your Age in Hours </b>
+</td>
+<td>
+<input class="resform" type="text" readonly="" size="36" name="val2">
+(Approximate)
+</td>
+</tr>
+<tr>
+<td class="form">
+<b> Your Age in Minutes </b>
+</td>
+<td>
+<input class="resform" type="text" readonly="" size="36" name="val3">
+(Approximate)
+</td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td></td>
+<td>
+<input class="innerc resform" type="text" readonly="" size="36" name="val4">
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody></table></div></div>
+<br>
+<br>
+<br>
+
+<!--tools iframe code adding offer section -->
+<h3>Add this tools to your blog/website</h3>
+To add this tool on your blog, copy this code below and place wherever you want show.
+<div class="textarea-code">
+<textarea onClick="this.select()" style="width: 100%; height: 110px;">
+&lt;div style=&quot;z-index: 9999; position: relative;&quot;&gt;
+&lt;iframe scrolling=&quot;No&quot; style=&quot;border: 0px none; overflow: auto; margin: 0px auto; width: 100%; height: 586px;&quot; src=&quot;http://tools.dimpost.com/raw/age-calculator.html&quot;&gt;&lt;/iframe&gt;&lt;div style=&quot;text-align:center;margin: -4px 0 5px;&quot;&gt;&lt;a style=&quot;color:#aaa; font-size:65%; text-decoration: none;&quot; href=&quot;http://tools.dimpost.com&quot; target=&quot;_blank&quot;&gt;tools.dimpost.com&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</textarea>
+</div>
+<!--tools iframe code adding offer section end-->
+
+<div style="clear:both"></div>
+
+
+
+<!--#content END here -->    
+</div></div>
+</div></div></div>
+
+<div class="row">    
+<div class="span10">
+  <div class="footer">
+   <center>
+	<a href="/">Home</a> | <a href="about.html">About</a> | <a href="disclaimer.html">Disclaimer</a> <br>
+    Copyright © 2013 <a href="http://dimpost.com">DIMPost.com</a>.All Rights Reserved. <br>
+	Please send your questions/comments to us at <u><a href="mailto:contact@dimpost.com">contact@dimpost.com</a> </u> </center>
+</div>
+</div>  </div>  
+</body>
+</html>

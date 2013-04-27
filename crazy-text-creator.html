@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Crazy Text Creator | Tools - DIMPost</title>
+
+<meta name="description" content="Crazy text creator will stylify your text in some crazy way, like twist, reversed boxed, circled etc.">
+
+<link href="favicon.ico" rel="icon">
+<link href="stylesheets/styles.css" rel="stylesheet" type="text/css" />
+<link href="stylesheets/bootstrap-responsive.css" rel="stylesheet">
+<!--[if lte IE 7]>
+<style>
+.content { margin-right: -1px; } /* this 1px negative margin can be placed on any of the columns in this layout with the same corrective effect. */
+ul.nav a { zoom: 1; }  /* the zoom property gives IE the hasLayout trigger it needs to correct extra whiltespace between the links */
+</style>
+<![endif]-->
+
+<script style="display:none">
+function proper() {
+var thisString = document.f.original.value;
+newVal = '';
+thisString = thisString.split(' ');
+for(var c=0; c < thisString.length; c++) {
+newVal += thisString[c].substring(0,1).toUpperCase() + thisString[c].substring(1,thisString[c].length) + ' ';
+}
+document.f.textfield2.value = newVal;
+}
+function caps()
+{
+var thisString;
+var rate=25;
+thisString = document.f.original.value;
+if (rate==100) newString=thisString.toUpperCase();
+else if (rate==0) newString=thisString.toLowerCase();
+var sLength=thisString.length;
+var newString="";
+for(i=0;i<sLength;i++)
+{
+var rand_no = Math.floor(100*Math.random());
+// alert(rand_no+" "+rate);
+if(rand_no < rate) newString.value=newString.value+thisString.substring(i,i+1).toUpperCase();
+else newString.value=newString.value+thisString.substring(i,i+1);
+alert(newString.value);
+//alert();
+}
+document.f.textfield2.value=newString;
+}
+function textTwist() {
+var thisString;
+thisString = document.f.original.value;
+thisString = thisString.replace(/1/g, "¹");
+thisString = thisString.replace(/2/g, "²");
+thisString = thisString.replace(/3/g, "³");
+thisString = thisString.replace(/5/g, "5");
+thisString = thisString.replace(/0/g, "Ø");
+thisString = thisString.replace(/A/g, "Ä");
+thisString = thisString.replace(/B/g, "ß");
+thisString = thisString.replace(/C/g, "Ç");
+thisString = thisString.replace(/D/g, "Ð");
+thisString = thisString.replace(/E/g, "È");
+//thisString = thisString.replace(/F/g, "£");
+thisString = thisString.replace(/I/g, "Ì");
+thisString = thisString.replace(/N/g, "ñ");
+thisString = thisString.replace(/O/g, "Ö");
+thisString = thisString.replace(/P/g, "þ");
+thisString = thisString.replace(/S/g, "§");
+//thisString = thisString.replace(/T/g, "&#8224;");
+thisString = thisString.replace(/U/g, "Ú");
+thisString = thisString.replace(/X/g, "×");
+thisString = thisString.replace(/Y/g, "¥");
+thisString = thisString.replace(/a/g, "å");
+thisString = thisString.replace(/b/g, "ß");
+thisString = thisString.replace(/c/g, "¢");
+thisString = thisString.replace(/d/g, "Ð");
+thisString = thisString.replace(/e/g, "ê");
+thisString = thisString.replace(/f/g, "£");
+thisString = thisString.replace(/i/g, "ï");
+thisString = thisString.replace(/n/g, "ñ");
+thisString = thisString.replace(/o/g, "ð");
+thisString = thisString.replace(/p/g, "þ");
+thisString = thisString.replace(/s/g, "§");
+//thisString = thisString.replace(/t/g, "&#8224;");
+thisString = thisString.replace(/u/g, "µ");
+thisString = thisString.replace(/y/g, "¥");
+document.f.textfield2.value=thisString;
+}
+function flip() {
+var result = flipString(document.f.original.value);
+document.f.textfield2.value = result;
+}
+function flipString(aString) {
+aString = aString.toLowerCase();
+var last = aString.length - 1;
+var result = "";
+for (var i = last; i >= 0; --i) {
+result += flipChar(aString.charAt(i))
+}
+return result;
+}
+function flipChar(c) {
+if (c == 'a') {
+return '\u0250'
+}
+else if (c == 'b') {
+return 'q'
+}
+else if (c == 'c') {
+return '\u0254'
+}
+else if (c == 'd') {
+return 'p'
+}
+else if (c == 'e') {
+return '\u01DD'
+}
+else if (c == 'f') {
+return '\u025F'
+}
+else if (c == 'g') {
+return 'ƃ'
+}
+else if (c == 'h') {
+return '\u0265'
+}
+else if (c == 'i') {
+return '\u0131'
+}
+else if (c == 'j') {
+//return '\u0638'
+return 'ɾ'
+}
+else if (c == 'k') {
+return '\u029E'
+}
+else if (c == 'l') {
+return 'ן'
+}
+else if (c == 'm') {
+return '\u026F'
+}
+else if (c == 'n') {
+return 'u'
+}
+else if (c == 'o') {
+return 'o'
+}
+else if (c == 'p') {
+return 'd'
+}
+else if (c == 'q') {
+return 'b'
+}
+else if (c == 'r') {
+return '\u0279'
+}
+else if (c == 's') {
+return 's'
+}
+else if (c == 't') {
+return '\u0287'
+}
+else if (c == 'u') {
+return 'n'
+}
+else if (c == 'v') {
+return '\u028C'
+}
+else if (c == 'w') {
+return '\u028D'
+}
+else if (c == 'x') {
+return 'x'
+}
+else if (c == 'y') {
+return '\u028E'
+}
+else if (c == 'z') {
+return 'z'
+}
+else if (c == '[') {
+return ']'
+}
+else if (c == ']') {
+return '['
+}
+else if (c == '(') {
+return ')'
+}
+else if (c == ')') {
+return '('
+}
+else if (c == '{') {
+return '}'
+}
+else if (c == '}') {
+return '{'
+}
+else if (c == '?') {
+return '\u00BF'
+}
+else if (c == '\u00BF') {
+return '?'
+}
+else if (c == '!') {
+return '\u00A1'
+}
+else if (c == "\'") {
+return ','
+}
+else if (c == ',') {
+return "\'"
+}
+else if (c == '>') {
+return "<"
+}
+else if (c == '<') {
+return ">"
+}
+else if (c == '»') {
+return "«"
+}
+else if (c == '«') {
+return "»"
+}
+return c;
+}
+function text2circle(aString)
+{
+var last = aString.length - 1;
+var result = "" ;
+for (var i = 0; i <= last; i++) {
+var chat = aString.charAt(i);
+switch(chat)
+{
+case '0': result = result + '⓪'; break;
+case '1': result = result + '①'; break;
+case '2': result = result + '②'; break;
+case '3': result = result + '③'; break;
+case '4': result = result + '④'; break;
+case '5': result = result + '⑤'; break;
+case '6': result = result + '⑥'; break;
+case '7': result = result + '⑦'; break;
+case '8': result = result + '⑧'; break;
+case '9': result = result + '⑨'; break;
+case 'a': result = result + 'ⓐ'; break;
+case 'b': result = result + 'ⓑ'; break;
+case 'c': result = result + 'ⓒ'; break;
+case 'd': result = result + 'ⓓ'; break;
+case 'e': result = result + 'ⓔ'; break;
+case 'f': result = result + 'ⓕ'; break;
+case 'g': result = result + 'ⓖ'; break;
+case 'h': result = result + 'ⓗ'; break;
+case 'i': result = result + 'ⓘ'; break;
+case 'j': result = result + 'ⓙ'; break;
+case 'k': result = result + 'ⓚ'; break;
+case 'l': result = result + 'ⓛ'; break;
+case 'm': result = result + 'ⓜ'; break;
+case 'n': result = result + 'ⓝ'; break;
+case 'o': result = result + 'ⓞ'; break;
+case 'p': result = result + 'ⓟ'; break;
+case 'q': result = result + 'ⓠ'; break;
+case 'r': result = result + 'ⓡ'; break;
+case 's': result = result + 'ⓢ'; break;
+case 't': result = result + 'ⓣ'; break;
+case 'u': result = result + 'ⓤ'; break;
+case 'v': result = result + 'ⓥ'; break;
+case 'w': result = result + 'ⓦ'; break;
+case 'x': result = result + 'ⓧ'; break;
+case 'y': result = result + 'ⓨ'; break;
+case 'z': result = result + 'ⓩ'; break;
+case 'A': result = result + 'Ⓐ'; break;
+case 'B': result = result + 'Ⓑ'; break;
+case 'C': result = result + 'Ⓒ'; break;
+case 'D': result = result + 'Ⓓ'; break;
+case 'E': result = result + 'Ⓔ'; break;
+case 'F': result = result + 'Ⓕ'; break;
+case 'G': result = result + 'Ⓖ'; break;
+case 'H': result = result + 'Ⓗ'; break;
+case 'I': result = result + 'Ⓘ'; break;
+case 'J': result = result + 'Ⓙ'; break;
+case 'K': result = result + 'Ⓚ'; break;
+case 'L': result = result + 'Ⓛ'; break;
+case 'M': result = result + 'Ⓜ'; break;
+case 'N': result = result + 'Ⓝ'; break;
+case 'O': result = result + 'Ⓞ'; break;
+case 'P': result = result + 'Ⓟ'; break;
+case 'Q': result = result + 'Ⓠ'; break;
+case 'R': result = result + 'Ⓡ'; break;
+case 'S': result = result + 'Ⓢ'; break;
+case 'T': result = result + 'Ⓣ'; break;
+case 'U': result = result + 'Ⓤ'; break;
+case 'V': result = result + 'Ⓥ'; break;
+case 'W': result = result + 'Ⓦ'; break;
+case 'X': result = result + 'Ⓧ'; break;
+case 'Y': result = result + 'Ⓨ'; break;
+case 'Z': result = result + 'Ⓩ'; break;
+default: result = result + chat; break;
+}
+}
+return result;
+}
+function textBox() {
+var result = boxString(document.f.original.value);
+//document.getElementById('dtext').innerText = "Test";
+document.f.textfield2.value = result;
+}
+function boxString(aString) {
+//aString = aString.toLowerCase();
+var last = aString.length - 1;
+var result = String.fromCharCode(9835,9829,9834)+" ";
+var tmpStr="";
+for (var i = 0; i <= last; i++) {
+if( aString.charAt(i) == " ")
+tmpStr = " ";
+else
+tmpStr = "["+String.fromCharCode(773,773,818)+aString.charAt(i)+String.fromCharCode(773,818)+"]";
+result += tmpStr
+}
+result = result + " "+String.fromCharCode(9834,9829,9835);
+return result;
+}
+function reversed() {
+var result = document.f.original.value.split("");
+result = result.reverse();
+//alert(result);
+result = result.join("");
+document.f.textfield2.value = result;
+}
+function mixed() {
+var result = mixedCase(document.f.original.value);
+//document.getElementById('dtext').innerText = "Test";
+document.f.textfield2.value = result;
+}
+function mixedCase(aString) {
+//aString = aString.toLowerCase();
+var last = aString.length - 1;
+var result = "";
+var rndNum=0;
+var flag = 0;
+aString = aString.toLowerCase();
+for (var i = 0; i <= last; i++) {
+rndNum=Math.floor(Math.random()*100);
+if(rndNum<50 && flag == 0)
+{
+result += aString.charAt(i).toUpperCase();
+flag = 1;
+}
+//else result += aString.charAt(i).toLowerCase();
+else {
+result += aString.charAt(i);
+flag = 0;
+}
+}
+return result;
+}
+function redirectpop()
+{
+var msg=document.getElementById('EDT').value;
+var linkURL ="http://www.facebook.com/dialog/feed?app_id=219514311400417&redirect_uri=http://www.dimpost.com/&display=popup&caption=&message="+msg;
+newwindow=window.open(linkURL,'name','height=300,width=500');
+if (window.focus) {newwindow.focus()}
+return false;
+}
+function redirectpage()
+{
+var msg=document.getElementById('EDT').value;
+var linkURL ="http://www.facebook.com/dialog/feed?app_id=219514311400417&redirect_uri=http://www.dimpost.com/&display=page&caption=&message="+msg;
+top.location.href = linkURL;
+return false;
+}
+function through()
+{
+var txt = document.f.original.value.split("");
+txt = txt.join("");
+var last = txt.length - 1;
+var result="";
+for (var i = 0; i <= last; i++) {
+// if( txt.charAt(i) == " ") result = result+txt.charAt(i);
+// else
+result = result+txt.charAt(i)+String.fromCharCode(822);
+}
+document.f.textfield2.value = result;
+}
+function circled() {
+var result = text2circle(document.f.original.value);
+//document.getElementById('dtext').innerText = "Test";
+document.f.textfield2.value = result;
+}
+function text2proper() {
+var thisString = document.f.original.value;
+var newVal = '';
+thisString = thisString.split(' ');
+for(var c=0; c < thisString.length; c++) {
+newVal += thisString[c].substring(0,1).toUpperCase() + thisString[c].substring(1,thisString[c].length) + ' ';
+}
+return(newVal);
+}
+function cProper() {
+var result = text2proper();
+// alert(result);
+result = text2circle(result);
+document.f.textfield2.value = result;
+}
+function cMixed() {
+var result = mixedCase(document.f.original.value);
+result= text2circle(result);
+//document.getElementById('dtext').innerText = "Test";
+document.f.textfield2.value = result;
+}
+</script>
+
+</head>
+
+<body>
+<div id="dimpost-menu-container">    
+<div class="container"> 
+ <ul id="dimpost-menu">
+<li><a href="/" >Tools Home</a></li>
+<li><a href="http://dimpost.com" target="_blank">Blog</a></li>
+<li><a href="http://project.dimpost.com" target="_blank">Project</a></li>
+<li><a href="about.html">About Us</a></li>
+
+</ul>
+</div> 
+</div>
+
+<div id="main-wrapper">
+<div class="container">
+<div id="main-body">
+      <div class="row">
+        <div class="span2">
+  <div id="site-logo-des"> 
+        <div id="header-container">
+  		<div id="site-logo">
+  		<a href="/">Tools<span style="font-size: 70%;"> DIMPost</span></a> 
+        </div>
+		
+        <div id="site-description">
+  		<p>Free useful online tools by dimpost.com</p>
+  </div>
+    </div>
+  </div>
+ </div>
+ 
+
+<div class="span8"> 
+  <div id="content-container"> 
+  <div class="content">
+     <h1>Crazy Text Creator<span> [<a href="raw/crazy-text-creator.html" target="_blank">Raw</a>]</span></h1>
+     <p>Write down a word/sentence and amazed by clicking on crazy buttons. They will stylify your text in some crazy way, like twist, reversed boxed, circled etc.</p>  
+
+<div style="max-width: 480px; margin: 0px auto;">
+<table width="100%" align="center" border="0">
+<tbody>
+<tr bgcolor="#336699"></tr>
+<tr>
+<td valign="top" align="center">
+<form name="f" method="post" action="#">
+<table width="95%" align="center">
+<tbody>
+<tr>
+<td>
+<p>Type your text below...</p>
+</td>
+</tr>
+<tr>
+<td align="center">
+<textarea rows="5" style="width: 100%; font-size: 18px;" name="original"></textarea>
+</td>
+</tr>
+<tr>
+<td align="center">
+<input type="button" onClick="flip()" value="Flip">
+<input type="button" onClick="mixed()" value="Mixed Case">
+<input type="button" onClick="textTwist()" value="Twist">
+<input type="button" onClick="textBox()" value="Boxed">
+<input type="button" onClick="reversed()" value="Reverse">
+<input type="button" onClick="through()" value="Through">
+<br>
+<input type="button" onClick="circled()" value="Circled">
+<input type="button" onClick="cProper()" value="Circled Proper">
+<input type="button" onClick="cMixed()" value="Circled Mixed">
+<input type="button" onClick="proper()" value="Proper">
+</td>
+</tr>
+<tr>
+<td align="center">
+<span id="dtext"></span>
+</td>
+</tr>
+<tr>
+<td align="center">
+<textarea id="EDT" rows="6" style="width: 100%; font-size: 18px;" name="textfield2"></textarea>
+</td>
+</tr>
+<tr>
+<td align="center"></td>
+</tr>
+<tr></tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+</form>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<br>
+
+
+<!--tools iframe code adding offer section -->
+<h3>Add this tools to your blog/website</h3>
+To add this tool on your blog, copy this code below and place wherever you want show.
+<div class="textarea-code">
+<textarea onClick="this.select()" style="width: 100%; height: 110px;">
+&lt;div style=&quot;z-index: 9999; position: relative;&quot;&gt;
+&lt;iframe scrolling=&quot;no&quot; style=&quot;border: 0px none; overflow: auto; margin: 0px auto; width: 100%; height: 442px;&quot; src=&quot;http://tools.dimpost.com/raw/crazy-text-creator.html&quot;&gt;&lt;/iframe&gt;&lt;div style=&quot;text-align:center;margin: -4px 0 12px;&quot;&gt;&lt;a style=&quot;color:#aaa; font-size:65%; text-decoration: none;&quot; href=&quot;http://tools.dimpost.com&quot; target=&quot;_blank&quot;&gt;tools.dimpost.com&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</textarea>
+</div>
+<!--tools iframe code adding offer section end-->
+
+<div style="clear:both"></div>
+
+
+
+<!--#content END here -->    
+</div></div>
+</div></div></div>
+
+<div class="row">    
+<div class="span10">
+  <div class="footer">
+   <center>
+	<a href="/">Home</a> | <a href="about.html">About</a> | <a href="disclaimer.html">Disclaimer</a> <br>
+    Copyright © 2013 <a href="http://dimpost.com">DIMPost.com</a>.All Rights Reserved. <br>
+	Please send your questions/comments to us at <u><a href="mailto:contact@dimpost.com">contact@dimpost.com</a> </u> </center>
+</div>
+</div>  </div>  
+</body>
+</html>

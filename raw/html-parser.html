@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>HTML Parser - DIMpost</title>
+<link href="../favicon.ico" rel="icon" />
+<style>
+body {
+font: 14px Verdana, Arial, Helvetica, sans-serif;
+}
+.htp-main-area {
+height: 290px;
+}
+.html-parser {
+max-height: 350px;
+min-height: 220px;
+max-width: 700px
+}
+.htp-box {
+border-color: #CCCCCC;
+border-style: solid;
+border-width: 1px 2px 2px 1px;
+height: 350px;
+margin: 10px auto;
+padding: 0 20px 18px;
+text-align: center;
+max-width: 500px;
+}
+.for-parse-another-link {
+height: 300px;
+}
+.button-css {
+cursor: pointer;
+border: none;
+background: #F2861D;
+padding: 3px 8px;
+margin: 7px 0 0;
+color: #f4f4f4;
+}
+.button-css:hover {
+background: #666666;
+}
+</style>
+</head>
+<body>
+<div class="htp-box">
+<div class="for-parse-another-link">
+<div style="text-align: center;">
+<center>
+<h1 style="font-size: 22px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">HTML Parser</h1>
+</center>
+<div class="htp-main-area">
+<center>
+<script style="display:none" type="text/javascript">
+function convert(){var ele1=document.getElementById("somewhere");var replaced;replaced=ele1.value;replaced=replaced.replace(/&/ig,"&amp;");replaced=replaced.replace(/</ig,"&lt;");replaced=replaced.replace(/>/ig,"&gt;");replaced=replaced.replace(/"/ig,"&quot;");replaced=replaced.replace(/ï¿½/ig,"&plusmn;");replaced=replaced.replace(/ï¿½/ig,"&copy;");replaced=replaced.replace(/ï¿½/ig,"&reg;");replaced=replaced.replace(/howdy/ig,"ya'll");ele1.value=replaced;}
+</script>
+<center>
+<table cellspacing="0" cellpadding="0" border="0" style="width: 100%; margin-top: 22px;">
+<tbody>
+<tr>
+<td valign="center" colspan="2">
+<textarea id="somewhere" class="html-parser" style="width: 99%;" onClick="this.select()"></textarea>
+<br>
+</td>
+</tr>
+<tr height="50px">
+<td width="80px">
+<input class="button-css" type="button" onclick="javascript:location.reload(true)" value="Refresh">
+</td>
+<td>
+<input class="button-css" type="button" onclick="convert();this.style.display = 'none';" value="Encode">
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</center>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Resistor Calculator | Tools - DIMPost</title>
+
+<meta name="description" content="Resistor calculator using color code, define resistor value using this resistor calculator ">
+
+<link href="favicon.ico" rel="icon">
+<link href="stylesheets/styles.css" rel="stylesheet" type="text/css" />
+<link href="stylesheets/bootstrap-responsive.css" rel="stylesheet">
+<!--[if lte IE 7]>
+<style>
+.content { margin-right: -1px; } /* this 1px negative margin can be placed on any of the columns in this layout with the same corrective effect. */
+ul.nav a { zoom: 1; }  /* the zoom property gives IE the hasLayout trigger it needs to correct extra whiltespace between the links */
+</style>
+<![endif]-->
+<link href="resistor-calculator-files/r-cal-style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="stylesheets/jquery.js"></script> 
+<style type="text/css">
+#band1 {
+     height: 66px;
+     left: 157px;
+     top: 63px;
+     width: 20px;
+}
+
+#band2 {
+     height: 66px;
+     left: 209px;
+     top: 63px;
+     width: 20px;
+}
+
+#band3 {
+     height: 66px;
+     left: 261px;
+     top: 63px;
+     width: 20px;
+}
+
+#band4 {
+     height: 78px;
+     left: 337px;
+     top: 57px;
+     width: 20px;
+}
+</style>
+</head>
+
+<body>
+<div id="dimpost-menu-container">    
+<div class="container"> 
+ <ul id="dimpost-menu">
+<li><a href="/" >Tools Home</a></li>
+<li><a href="http://dimpost.com" target="_blank">Blog</a></li>
+<li><a href="http://project.dimpost.com" target="_blank">Project</a></li>
+<li><a href="about.html">About Us</a></li>
+
+</ul>
+</div> 
+</div>
+
+<div id="main-wrapper">
+<div class="container">
+<div id="main-body">
+      <div class="row">
+        <div class="span2">
+  <div id="site-logo-des"> 
+        <div id="header-container">
+  		<div id="site-logo">
+  		<a href="/">Tools<span style="font-size: 70%;"> DIMPost</span></a> 
+        </div>
+		
+        <div id="site-description">
+  		<p>Free useful online tools by dimpost.com</p>
+  </div>
+    </div>
+  </div>
+ </div>
+ 
+
+<div class="span8"> 
+  <div id="content-container"> 
+  <div class="content">
+     <h1>Resistor Calculator<span> [<a href="raw/resistor-calculator.html" target="_blank">Raw</a>]</span></h1>
+     <p>To find a resistors value (resistance-Ω) using color-code is so difficult if you don't know about color-code system. Using this simple tool you can calculate a resistors value. This tool has fully visual interface so anyone can calculate resistors value by just few click.</p>  
+     <br>
+<div id="resistor-calculator-container">
+		<div class="toolWrap clearfix">
+		<div class="toolBody"><h2>4 Band Resistor Calculator</h2>
+		<img src="resistor-calculator-files/resbody.png" alt="resistor" width="417" height="80" class="toolMainImage" title="" /><div style="background-color: rgb(255, 102, 0);" class="resistor_band" id="band1"></div><div style="background-color: rgb(255, 204, 0);" class="resistor_band" id="band2"></div><div style="background-color: rgb(0, 0, 128);" class="resistor_band" id="band3"></div><div style="background-color: rgb(179, 179, 179);" class="resistor_band" id="band4"></div><!--<h3 class="inputHL">Inputs</h3>--><div class="inputRow clearfix"><div class="fieldName"></div><div class="thumb_label">1st Digit</div><div class="thumb_label">2nd Digit</div><div class="thumb_label">Multiplier</div><div class="thumb_label">Tolerance</div></div><!--<h3 class="inputHL">Inputs</h3>--><div class="inputRow clearfix"><div class="fieldName">Black</div><div style="background-color: rgb(242, 242, 242);" class="black_hover color_thumb_blank" id="r1_black_thumb"></div><div style="background-color: rgb(0, 0, 0);" class="black_hover color_thumb_black" id="r2_black_thumb">0</div><div style="background-color: rgb(0, 0, 0);" class="black_hover color_thumb_black" id="r3_black_thumb">x1</div><div style="background-color: rgb(242, 242, 242);" class="black_hover color_thumb_blank" id="r4_black_thumb"></div></div><div class="inputRow clearfix"><div class="fieldName">Brown</div><div style="background-color: rgb(160, 90, 44);" class="brown_hover color_thumb_brown" id="r1_brown_thumb">1</div><div style="background-color: rgb(160, 90, 44);" class="brown_hover color_thumb_brown" id="r2_brown_thumb">1</div><div style="background-color: rgb(160, 90, 44);" class="brown_hover color_thumb_brown" id="r3_brown_thumb">x10</div><div style="background-color: rgb(160, 90, 44);" class="brown_hover color_thumb_brown" id="r4_brown_thumb">± 1%</div></div><div class="inputRow clearfix"><div class="fieldName">Red</div><div style="background-color: rgb(218, 0, 0);" class="red_hover color_thumb_red" id="r1_red_thumb">2</div><div style="background-color: rgb(218, 0, 0);" class="red_hover color_thumb_red" id="r2_red_thumb">2</div><div style="background-color: rgb(218, 0, 0);" class="red_hover color_thumb_red" id="r3_red_thumb">x100</div><div style="background-color: rgb(218, 0, 0);" class="red_hover color_thumb_red" id="r4_red_thumb">± 2%</div></div><div class="inputRow clearfix"><div class="fieldName">Orange</div><div style="background-color: rgb(255, 102, 0);" class="orange_hover color_thumb_orange" id="r1_orange_thumb">3</div><div style="background-color: rgb(255, 102, 0);" class="orange_hover color_thumb_orange" id="r2_orange_thumb">3</div><div style="background-color: rgb(255, 102, 0);" class="orange_hover color_thumb_orange" id="r3_orange_thumb">x1K</div><div style="background-color: rgb(255, 102, 0);" class="orange_hover color_thumb_orange" id="r4_orange_thumb">± 3%</div></div><div class="inputRow clearfix"><div class="fieldName">Yellow</div><div style="background-color: rgb(255, 204, 0);" class="yellow_hover color_thumb_yellow" id="r1_yellow_thumb">4</div><div style="background-color: rgb(255, 204, 0);" class="yellow_hover color_thumb_yellow" id="r2_yellow_thumb">4</div><div style="background-color: rgb(255, 204, 0);" class="yellow_hover color_thumb_yellow" id="r3_yellow_thumb">x10K</div><div style="background-color: rgb(255, 204, 0);" class="yellow_hover color_thumb_yellow" id="r4_yellow_thumb">± 4%</div></div><div class="inputRow clearfix"><div class="fieldName">Green</div><div style="background-color: rgb(0, 128, 0);" class="green_hover color_thumb_green" id="r1_green_thumb">5</div><div style="background-color: rgb(0, 128, 0);" class="green_hover color_thumb_green" id="r2_green_thumb">5</div><div style="background-color: rgb(0, 128, 0);" class="green_hover color_thumb_green" id="r3_green_thumb">x100K</div><div style="background-color: rgb(0, 128, 0);" class="green_hover color_thumb_green" id="r4_green_thumb">± 0.5%</div></div><div class="inputRow clearfix"><div class="fieldName">Blue</div><div style="background-color: rgb(0, 0, 128);" class="blue_hover color_thumb_blue" id="r1_blue_thumb">6</div><div style="background-color: rgb(0, 0, 128);" class="blue_hover color_thumb_blue" id="r2_blue_thumb">6</div><div style="background-color: rgb(0, 0, 128);" class="blue_hover color_thumb_blue" id="r3_blue_thumb">x1M</div><div style="background-color: rgb(0, 0, 128);" class="blue_hover color_thumb_blue" id="r4_blue_thumb">± 0.25%</div></div><div class="inputRow clearfix"><div class="fieldName">Violet</div><div style="background-color: rgb(128, 0, 128);" class="violet_hover color_thumb_violet" id="r1_violet_thumb">7</div><div style="background-color: rgb(128, 0, 128);" class="violet_hover color_thumb_violet" id="r2_violet_thumb">7</div><div style="background-color: rgb(128, 0, 128);" class="violet_hover color_thumb_violet" id="r3_violet_thumb">x10M</div><div style="background-color: rgb(128, 0, 128);" class="violet_hover color_thumb_violet" id="r4_violet_thumb">± 0.10%</div></div><div class="inputRow clearfix"><div class="fieldName">Grey</div><div style="background-color: rgb(102, 102, 102);" class="grey_hover color_thumb_grey" id="r1_grey_thumb">8</div><div style="background-color: rgb(102, 102, 102);" class="grey_hover color_thumb_grey" id="r2_grey_thumb">8</div><div style="background-color: rgb(102, 102, 102);" class="grey_hover color_thumb_grey" id="r3_grey_thumb">x100M</div><div style="background-color: rgb(102, 102, 102);" class="grey_hover color_thumb_grey" id="r4_grey_thumb">± 0.05%</div></div><div class="inputRow clearfix"><div class="fieldName">White</div><div style="background-color: rgb(255, 255, 255);" class="white_hover color_thumb_white" id="r1_white_thumb">9</div><div style="background-color: rgb(255, 255, 255);" class="white_hover color_thumb_white" id="r2_white_thumb">9</div><div style="background-color: rgb(255, 255, 255);" class="white_hover color_thumb_white" id="r3_white_thumb">x1G</div><div style="background-color: rgb(242, 242, 242);" class="white_hover color_thumb_blank" id="r4_white_thumb"></div></div><div class="inputRow clearfix"><div class="fieldName">Gold</div><div class="gold_hover color_thumb_blank" id="r1_gold_thumb"></div><div class="gold_hover color_thumb_blank" id="r2_gold_thumb"></div><div style="background-color: rgb(212, 160, 23);" class="gold_hover color_thumb_gold" id="r3_gold_thumb">÷ 10</div><div style="background-color: rgb(212, 160, 23);" class="gold_hover color_thumb_gold" id="r4_gold_thumb">± 5%</div></div><div class="inputRow clearfix"><div class="fieldName">Silver</div><div class="silver_hover color_thumb_blank" id="r1_silver_thumb"></div><div class="silver_hover color_thumb_blank" id="r2_silver_thumb"></div><div style="background-color: rgb(179, 179, 179);" class="silver_hover color_thumb_silver" id="r3_silver_thumb">÷ 100</div><div style="background-color: rgb(179, 179, 179);" class="silver_hover color_thumb_silver" id="r4_silver_thumb">± 10%</div></div><h3 class="inputHL" style="margin-top:10px;">Outputs</h3><div class="inputRow clearfix"><div class="outputLabels"><p>Resistance:&nbsp;</p></div><div class="outputVals" id="outputVal_1">34.00M&nbsp;ohms</div>&nbsp;</div><div class="inputRow clearfix"><div class="outputLabels"><p>Tolerance:&nbsp;</p></div><div class="outputVals" id="outputVal_2">±&nbsp;10%</div></div></div></div><script style="display: none;" type="text/javascript">$(document).ready(function(){$("#input_1").val(3);$("#input_2").val(2.5);$("#input_2").val(2.5);testMe();$(".fieldInput").keyup(function(event){testMe();});$(".fieldSelect").change(function(event){testMe();});var getColor;$('.toolSideBarCell').hover(function(){getColor=$(this).css("background-color");if(getColor!="rgb(255, 238, 170)")
+$(this).css("background-color","#fff6d5");},function(){$(this).css("background-color",getColor);});$('.toolSideBarCell').click(function(){var getLink=$(this).find("a").attr("href");window.location=getLink;return false;});});function testMe(){var temp1=parseFloat($("#input_1").val());var temp2=parseFloat($("#input_2").val());var temp3=parseFloat($("#length_unit").val());var calVal=(temp1+temp2)*temp3;$("#outputVal_1").text(calVal);}
+</script> <script style="display: none;" type="text/javascript">$(document).ready(function(){var d1=5;var d2=6;var mult=100;var tol=5;var black_hover='#323232';var brown_hover='#d38c5d';var red_hover='#ff6565';var orange_hover='#ffa365';var yellow_hover='#ffe165';var green_hover='#00ca00';var blue_hover='#0000ae';var violet_hover='#aa00aa';var grey_hover='#8e8e8e';var white_hover='#e2e2e2';var gold_hover='#ebbe46';var silver_hover='#cacaca';var black='#000000';var brown='#a05a2c';var red='#da0000';var orange='#ff6600';var yellow='#ffcc00';var green='#008000';var blue='#000080';var violet='#800080';var grey='#666666';var white='#ffffff';var gold='#d4a017';var silver='#b3b3b3';calc_outs(d1,d2,mult,tol);var hover_color;$(".black_hover").hover(function(){hover_color=$(this).css('background-color');$(this).css('background-color',black_hover);},function(){$(this).css('background-color',hover_color);});$(".brown_hover").hover(function(){hover_color=$(this).css('background-color');$(this).css('background-color',brown_hover);},function(){$(this).css('background-color',hover_color);});$(".red_hover").hover(function(){hover_color=$(this).css('background-color');$(this).css('background-color',red_hover);},function(){$(this).css('background-color',hover_color);});$(".orange_hover").hover(function(){hover_color=$(this).css('background-color');$(this).css('background-color',orange_hover);},function(){$(this).css('background-color',hover_color);});$(".yellow_hover").hover(function(){hover_color=$(this).css('background-color');$(this).css('background-color',yellow_hover);},function(){$(this).css('background-color',hover_color);});$(".green_hover").hover(function(){hover_color=$(this).css('background-color');$(this).css('background-color',green_hover);},function(){$(this).css('background-color',hover_color);});$(".blue_hover").hover(function(){hover_color=$(this).css('background-color');$(this).css('background-color',blue_hover);},function(){$(this).css('background-color',hover_color);});$(".violet_hover").hover(function(){hover_color=$(this).css('background-color');$(this).css('background-color',violet_hover);},function(){$(this).css('background-color',hover_color);});$(".grey_hover").hover(function(){hover_color=$(this).css('background-color');$(this).css('background-color',grey_hover);},function(){$(this).css('background-color',hover_color);});$(".white_hover").hover(function(){hover_color=$(this).css('background-color');$(this).css('background-color',white_hover);},function(){$(this).css('background-color',hover_color);});$(".gold_hover").hover(function(){hover_color=$(this).css('background-color');$(this).css('background-color',gold_hover);},function(){$(this).css('background-color',hover_color);});$(".silver_hover").hover(function(){hover_color=$(this).css('background-color');$(this).css('background-color',silver_hover);},function(){$(this).css('background-color',hover_color);});$("#band1").css('background-color',green);$("#band2").css('background-color',blue);$("#band3").css('background-color',red);$("#band4").css('background-color',gold);$("#r2_black_thumb").click(function(){$("#band2").css('background-color',black);d2=0;calc_outs(d1,d2,mult,tol);});$("#r3_black_thumb").click(function(){$("#band3").css('background-color',black);mult=1;calc_outs(d1,d2,mult,tol);});$("#r1_brown_thumb").click(function(){$("#band1").css('background-color',brown);d1=1;calc_outs(d1,d2,mult,tol);});$("#r2_brown_thumb").click(function(){$("#band2").css('background-color',brown);d2=1;calc_outs(d1,d2,mult,tol);});$("#r3_brown_thumb").click(function(){$("#band3").css('background-color',brown);mult=10;calc_outs(d1,d2,mult,tol);});$("#r4_brown_thumb").click(function(){$("#band4").css('background-color',brown);tol=1;calc_outs(d1,d2,mult,tol);});$("#r1_red_thumb").click(function(){$("#band1").css('background-color',red);d1=2;calc_outs(d1,d2,mult,tol);});$("#r2_red_thumb").click(function(){$("#band2").css('background-color',red);d2=2;calc_outs(d1,d2,mult,tol);});$("#r3_red_thumb").click(function(){$("#band3").css('background-color',red);mult=100;calc_outs(d1,d2,mult,tol);});$("#r4_red_thumb").click(function(){$("#band4").css('background-color',red);tol=2;calc_outs(d1,d2,mult,tol);});$("#r1_orange_thumb").click(function(){$("#band1").css('background-color',orange);d1=3;calc_outs(d1,d2,mult,tol);});$("#r2_orange_thumb").click(function(){$("#band2").css('background-color',orange);d2=3;calc_outs(d1,d2,mult,tol);});$("#r3_orange_thumb").click(function(){$("#band3").css('background-color',orange);mult=1000;calc_outs(d1,d2,mult,tol);});$("#r4_orange_thumb").click(function(){$("#band4").css('background-color',orange);tol=3;calc_outs(d1,d2,mult,tol);});$("#r1_yellow_thumb").click(function(){$("#band1").css('background-color',yellow);d1=4;calc_outs(d1,d2,mult,tol);});$("#r2_yellow_thumb").click(function(){$("#band2").css('background-color',yellow);d2=4;calc_outs(d1,d2,mult,tol);});$("#r3_yellow_thumb").click(function(){$("#band3").css('background-color',yellow);mult=10000;calc_outs(d1,d2,mult,tol);});$("#r4_yellow_thumb").click(function(){$("#band4").css('background-color',yellow);tol=4;calc_outs(d1,d2,mult,tol);});$("#r1_green_thumb").click(function(){$("#band1").css('background-color',green);d1=5;calc_outs(d1,d2,mult,tol);});$("#r2_green_thumb").click(function(){$("#band2").css('background-color',green);d2=5;calc_outs(d1,d2,mult,tol);});$("#r3_green_thumb").click(function(){$("#band3").css('background-color',green);mult=100000;calc_outs(d1,d2,mult,tol);});$("#r4_green_thumb").click(function(){$("#band4").css('background-color',green);tol=.5;calc_outs(d1,d2,mult,tol);});$("#r1_blue_thumb").click(function(){$("#band1").css('background-color',blue);d1=6;calc_outs(d1,d2,mult,tol);});$("#r2_blue_thumb").click(function(){$("#band2").css('background-color',blue);d2=6;calc_outs(d1,d2,mult,tol);});$("#r3_blue_thumb").click(function(){$("#band3").css('background-color',blue);mult=1000000;calc_outs(d1,d2,mult,tol);});$("#r4_blue_thumb").click(function(){$("#band4").css('background-color',blue);tol=.25;calc_outs(d1,d2,mult,tol);});$("#r1_violet_thumb").click(function(){$("#band1").css('background-color',violet);d1=7;calc_outs(d1,d2,mult,tol);});$("#r2_violet_thumb").click(function(){$("#band2").css('background-color',violet);d2=7;calc_outs(d1,d2,mult,tol);});$("#r3_violet_thumb").click(function(){$("#band3").css('background-color',violet);mult=10e6;calc_outs(d1,d2,mult,tol);});$("#r4_violet_thumb").click(function(){$("#band4").css('background-color',violet);tol=.1;calc_outs(d1,d2,mult,tol);});$("#r1_grey_thumb").click(function(){$("#band1").css('background-color',grey);d1=8;calc_outs(d1,d2,mult,tol);});$("#r2_grey_thumb").click(function(){$("#band2").css('background-color',grey);d2=8;calc_outs(d1,d2,mult,tol);});$("#r3_grey_thumb").click(function(){$("#band3").css('background-color',grey);mult=100e6;calc_outs(d1,d2,mult,tol);});$("#r4_grey_thumb").click(function(){$("#band4").css('background-color',grey);tol=.05;calc_outs(d1,d2,mult,tol);});$("#r1_white_thumb").click(function(){$("#band1").css('background-color',white);d1=9;calc_outs(d1,d2,mult,tol);});$("#r2_white_thumb").click(function(){$("#band2").css('background-color',white);d2=9;calc_outs(d1,d2,mult,tol);});$("#r3_white_thumb").click(function(){$("#band3").css('background-color',white);mult=1000e6;calc_outs(d1,d2,mult,tol);});$("#r3_gold_thumb").click(function(){$("#band3").css('background-color',gold);mult=.1;calc_outs(d1,d2,mult,tol);});$("#r4_gold_thumb").click(function(){$("#band4").css('background-color',gold);tol=5;calc_outs(d1,d2,mult,tol);});$("#r3_silver_thumb").click(function(){$("#band3").css('background-color',silver);mult=.01;calc_outs(d1,d2,mult,tol);});$("#r4_silver_thumb").click(function(){$("#band4").css('background-color',silver);tol=10;calc_outs(d1,d2,mult,tol);});});function calc_outs(d1,d2,mult,tol){var res=(d1*10+d2*1)*mult;$("#outputVal_1").html(engFormat(res)+'&nbsp;ohms');$("#outputVal_2").html('&#177;&nbsp;'+tol+'%');}
+function engFormat(v){if(v>=1e12)
+v=(v/1e12).toFixed(2)+'T';else if(v>=1e9)
+v=(v/1e9).toFixed(2)+'G';else if(v>=1e6)
+v=(v/1e6).toFixed(2)+'M';else if(v>=1e3)
+v=(v/1e3).toFixed(2)+'k';else{v=parseFloat(v); v=v.toFixed(2);}
+return v}
+</script></div><br>
+<br>
+<br>
+
+
+<!--tools iframe code adding offer section -->
+<h3>Add this tools to your blog/website</h3>
+To add this tool on your blog, copy this code below and place wherever you want show.
+<div class="textarea-code">
+<textarea onClick="this.select()" style="width: 100%; height: 110px;">
+&lt;div style=&quot;z-index: 9999; position: relative;&quot;&gt;
+&lt;iframe scrolling=&quot;no&quot; style=&quot;border: 0px none; overflow: auto; margin: 0px auto; width: 100%; height: 630px;&quot; src=&quot;http://tools.dimpost.com/raw/resistor-calculator.html&quot;&gt;&lt;/iframe&gt;&lt;div style=&quot;text-align:center;margin: -4px 0 12px;&quot;&gt;&lt;a style=&quot;color:#aaa; font-size:65%; text-decoration: none;&quot; href=&quot;http://tools.dimpost.com&quot; target=&quot;_blank&quot;&gt;tools.dimpost.com&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</textarea>
+</div>
+<!--tools iframe code adding offer section end-->
+
+<div style="clear:both"></div>
+
+
+
+<!--#content END here -->    
+</div></div>
+</div></div></div>
+
+<div class="row">    
+<div class="span10">
+  <div class="footer">
+   <center>
+	<a href="/">Home</a> | <a href="about.html">About</a> | <a href="disclaimer.html">Disclaimer</a> <br>
+    Copyright © 2013 <a href="http://dimpost.com">DIMPost.com</a>.All Rights Reserved. <br>
+	Please send your questions/comments to us at <u><a href="mailto:contact@dimpost.com">contact@dimpost.com</a> </u> </center>
+</div>
+</div>  </div>  
+</body>
+</html>

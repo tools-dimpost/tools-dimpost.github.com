@@ -1,0 +1,22 @@
+.cal-container {
+	width: 540px;
+margin: 10px auto 0;	
+}
+#age-calculator {
+    background: none repeat scroll 0 0 #DDDDDD;
+    border: 1px solid #BEBEBE;
+    padding-left: 20px;
+}
+
+.calc {
+    border-color: #AAAAAA #999999 #929292 #AAAAAA;
+    border-style: solid;
+    border-width: 1px 2px 2px 1px;
+    padding: 2px 30px 3px;
+    height: 27px;
+}
+.calc:active {
+    border-color: #AAAAAA #999999 #929292 #AAAAAA;
+    border-style: solid;
+    border-width: 1px;
+}
