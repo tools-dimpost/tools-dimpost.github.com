@@ -54,6 +54,7 @@ background: #666666;
 function convert(){var ele1=document.getElementById("somewhere");var replaced;replaced=ele1.value;replaced=replaced.replace(/&/ig,"&amp;");replaced=replaced.replace(/</ig,"&lt;");replaced=replaced.replace(/>/ig,"&gt;");replaced=replaced.replace(/"/ig,"&quot;");replaced=replaced.replace(/ï¿½/ig,"&plusmn;");replaced=replaced.replace(/ï¿½/ig,"&copy;");replaced=replaced.replace(/ï¿½/ig,"&reg;");replaced=replaced.replace(/howdy/ig,"ya'll");ele1.value=replaced;}
 </script>
 <center>
+<form>
 <table cellspacing="0" cellpadding="0" border="0" style="width: 100%; margin-top: 22px;">
 <tbody>
 <tr>
@@ -64,14 +65,15 @@ function convert(){var ele1=document.getElementById("somewhere");var replaced;re
 </tr>
 <tr height="50px">
 <td width="80px">
-<input class="button-css" type="button" onclick="javascript:location.reload(true)" value="Refresh">
+<input class="button-css" type="button" onclick="convert()" value="Convert">
 </td>
 <td>
-<input class="button-css" type="button" onclick="convert();this.style.display = 'none';" value="Encode">
+<input class="button-css" type="reset" value="Clear">
 </td>
 </tr>
 </tbody>
 </table>
+</form>
 </center>
 </center>
 </div>
